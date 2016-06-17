@@ -1,0 +1,38 @@
+
+<%= form_tag url_for(:controller=>"collapsible",:action =>"getcollaps")  do %>
+
+
+<div class="collaps-row">
+<%= text_area_tag :collaps1,  "",:class => "text-area" %>
+<%= text_area_tag :collaps2,  "",:class => "text-area" %>
+<%= text_area_tag :collaps3,  "",:class => "text-area" %>
+</div>
+
+<div class="collaps-row">
+<%= text_area_tag :collaps4,  "",:class => "text-area" %>
+<%= text_area_tag :collaps5, "", :class => "text-area" %>
+<%= text_area_tag :collaps6, "", :class => "text-area" %>
+</div>
+
+<div class="collaps-row">
+<%= text_area_tag :collaps7,  "",:class => "text-area" %>
+<%= text_area_tag :collaps8,  "",:class => "text-area" %>
+<%= text_area_tag :collaps9,  "",:class => "text-area" %>
+</div>
+
+<div class="collaps-row">
+<%= text_area_tag :collaps10,  "",:class => "text-area" %>
+<%= text_area_tag :collaps11,  "",:class => "text-area" %>
+<%= text_area_tag :collaps12,  "",:class => "text-area" %>
+</div>
+
+<div class="collaps-row">
+<%= text_area_tag :collaps13,  "",:class => "text-area" %>
+<%= text_area_tag :collaps14,  "",:class => "text-area" %>
+<%= text_area_tag :collaps15,  "",:class => "text-area" %>
+</div>
+
+
+
+ <%= submit_tag 'Generate', class: "btn-submit"%>
+ <%end%>

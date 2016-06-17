@@ -1,0 +1,43 @@
+<h2 style="text-align:center;"> NEWS GENERATOR </h2>
+<div class="half-one">
+<%= form_tag url_for(:controller=>"news",:action =>"news_gen"),remote:true   do %>
+
+<%= check_box_tag 'h3'%>
+<%= label_tag(:allowed, "H3") %> 
+
+<%= check_box_tag 'page'%>
+<%= label_tag(:allowed, "TLP") %> 
+
+<%= check_box_tag 'newsad'%>
+<%= label_tag(:allowed, "NEWSAD") %>
+<br /><hr>
+<strong><%= label_tag(:newsT, "News Title:") %></strong><br />
+<%= text_field(:newsT, nil, class: "none")%>
+<br /><br />
+<strong><%= label_tag(:newsH, "News Heading:") %></strong><br />
+<%= text_field(:newsH, nil, class: "none")%>
+<br /><br />
+<strong><%= label_tag(:newsD, "News Date:") %></strong> <br/>
+<%=text_field(:newsD, nil, class: "none")%>
+<br /><br />
+
+<strong><%= label_tag(:newsD, "News Content:") %></strong> <br />
+<%= tinymce_assets %>
+<%= text_area_tag :content, "", :class => "tinymce", :rows => 15, :cols => 10 %>
+<%= tinymce%>
+<br />
+ <%= submit_tag 'Generate', class: "btn-submit"%>
+	<%end%>
+</div>
+
+
+
+<div id="news" class="half-one">
+	<span><h3>HTML NEWS:</h3></span><span class="nums"></span><br />
+	<div id="textarea" contenteditable="true"></div>
+	</div>
+<div style="clear:both"></div>
+<h3 style="text-align:center;">HTML OUTPUT</h3>
+<div id="op">
+</div>
+

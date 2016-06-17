@@ -1,0 +1,35 @@
+<textarea class="bada">
+<div class="row btm-pad">
+<div class="container product-interlinks">
+<div class="row btm-pad" style="padding: 15px 0">
+<%if !@column1.empty?%>
+<div class="row btm-pad twi-accordion col-md-4 ">
+<div id="accordion" class="panel-group">
+<%@column1.each do |structure|%>
+<%=structure%>
+<%end%>    
+</div>
+</div>
+<%end%>
+<%if !@column2.empty?%>
+<div class="row btm-pad twi-accordion col-md-4 ">
+<div id="accordion" class="panel-group">
+<%@column2.each do |structure|%>
+<%=structure%>
+<%end%>    
+</div>
+</div>
+<%end%>
+<%if !@column3.empty?%>
+<div class="row btm-pad twi-accordion col-md-4 ">
+<div id="accordion" class="panel-group">
+<%@column3.each do |structure|%>
+<%=structure%>
+<%end%>    
+</div>
+</div>
+<%end%>
+</div>
+</div>
+</div>                          
+</textarea>

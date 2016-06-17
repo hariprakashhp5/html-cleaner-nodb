@@ -1,0 +1,143 @@
+ #editor { 
+    	/*position: absolute;
+        top: 10%;
+        right: 0;
+        bottom: 0;
+        left: 50%;*/
+       width: 695px;
+        height:590px;
+    }
+
+#op{
+  border: 1px solid #999;
+  margin: 0 10px 10px 10px;
+  padding: 5px 10px;
+ background:#FFFFFF;
+  a {
+  color: #16a085;
+
+  &:visited {
+    color: #16a085;
+  }
+
+  &:hover {
+    
+    
+  }
+
+
+
+}
+
+.table {
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+    border-collapse: separate;
+    border-width: 0 1px 1px 0;
+    }
+
+
+
+table tr td {
+    padding: 5px 10px
+} 
+
+.table-curved {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #f4f5f7;
+    border-collapse: collapse;
+    border-color: #ddd;
+    border-image: none;
+    border-radius: 0 0 6px 6px;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center
+}
+
+
+.table-curved ol {
+    padding-left: 0
+}
+
+
+
+
+}
+
+
+#op .table-curved>thead>tr>th,
+#op .table-curved>tbody>tr>th,
+.table-curved>tfoot>tr>th,
+#op .table-curved>thead>tr>td,
+#op .table-curved>tbody>tr>td,
+#op .table-curved>tfoot>tr>td {
+    line-height: 1.231;
+    border-top: 1px solid #ddd;
+    padding: 9px 15px;
+    text-align: left;
+    vertical-align: middle
+}
+#op .table-curved>:first-child>:first-child>:first-child {
+    border-top-left-radius: 0
+}
+#op .table-curved>:first-child>:first-child>:last-child {
+    border-top-right-radius: 0
+}
+#op .table-curved>tbody>tr>td {
+    border-right: 1px solid #ddd;
+    background-color:#f4f5f7;
+}
+#op .table-curved>tbody>tr>td ol {
+    margin: 0;
+    padding-left: 16px
+}
+
+#op u {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 5px
+}
+
+#op p {
+    font-size: 14px;
+    margin: 0 0 10px
+}
+
+.none{
+    width:70%;
+    height:20px;
+}
+
+.tt{
+color: #666666;
+width: 50%;
+border: 1px solid #E6E6E6;
+border-radius: 0px; 
+height: 40px;
+margin: 6px auto;
+text-indent: 10px;
+}
+
+.form{
+    width:50%;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.btn-submit-one {
+color: #FFFFFF;
+font-size: 15px;
+text-transform: uppercase;
+/*background: #c91717;*/
+background: #666;
+padding: 10px 10px;
+border: 0;
+margin-top: 6px;
+}

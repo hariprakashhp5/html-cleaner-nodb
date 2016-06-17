@@ -1,0 +1,41 @@
+<%if @page == nil%>
+<%if @newsad == "1"%>
+&lt;div class="row news-widget"&gt; 
+&lt;h2 class="tcenter btm-pad"&gt;<%=@newsT.first%>&lt;/h2&gt; &lt;ul&gt;
+<%end%>
+&lt;li class="news-green"&gt; 
+&lt;<%=@tag%> class="news-head"&gt;<%=@newsH.first%>&lt;/<%=@tag%>&gt;<br />
+<%=@newsC%><br />
+&lt;div class="pull-right"&gt; 
+&lt;p&gt;&lt;img src="/images/bb-logo.png" alt=""&gt;&lt;/p&gt; <br />
+&lt;p&gt;&lt;em&gt;
+<%=@newsD.first%>
+&lt;/em&gt;&lt;/p&gt; &lt;/div&gt; <br /> &lt;div class="clearfix"&gt;&lt;/div&gt; &lt;/li&gt;
+<%if @newsad == "1"%>
+&lt;/ul&gt; &lt;/div&gt;
+<%end%>
+<%elsif @page == "1"%>
+<%if @newsad == "1"%>
+&lt;div class="container"&gt;  <br />
+&lt;div class="row news-widget"&gt; <br />
+&lt;h2 class="tcenter"&gt;<%=@newsT.first%>&lt;/h2&gt; <br />
+&lt;ul&gt;<br />
+<%end%>
+&lt;li class="news-green clearfix"&gt; <br />
+&lt;<%=@tag%> class="news-head"&gt;<%=@newsH.first%>&lt;/<%=@tag%>&gt; <br />
+&lt;p&gt;by BankBazaar posted on <%=@newsD.first%>&lt;/p&gt;<br />
+<%=@newsC%><br />
+&lt;div class="pull-right"&gt;<br />
+&lt;img src="/images/common/bb-logo-180-40.png" alt="BankBazaar News About Loan"&gt; <br />
+&lt;/div&gt; <br />
+&lt;/li&gt; <br />
+
+<%if @newsad == "1"%>
+&lt;/ul&gt; <br />
+&lt;/div&gt; <br />
+&lt;/div&gt; 
+<%end%>
+
+
+
+<%end%>

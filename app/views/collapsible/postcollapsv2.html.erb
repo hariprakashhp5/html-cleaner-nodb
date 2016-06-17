@@ -1,0 +1,25 @@
+<textarea class="bada">
+<%if @newcollaps == "1"%>
+<div class="row btm-pad" style="padding: 15px 0">
+<div class="row btm-pad twi-accordion col-md-12 ">
+<div id="accordion" class="panel-group">
+<%end%>
+<div class="panel panel-default">
+<div class="panel-heading">
+<<%=@tag%> class="panel-title"> <a href=<%=@href%> data-parent="#accordion" data-toggle="collapse" class="accordion-toggle collapsed"> 
+<span class="fui-plus"></span><%=@heading%></a></<%=@tag%>>
+</div>
+<div class="panel-collapse collapse" id=<%=@id%> >
+<div class="panel-body twi-auto-height">
+
+<%=@content%>
+
+</div>
+</div>
+</div>
+<%if @newcollaps == "1"%>
+</div>
+</div>
+</div>
+<%end%>
+</textarea>
