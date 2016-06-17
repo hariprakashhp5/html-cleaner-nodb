@@ -12,21 +12,21 @@
 <%= label_tag(:allowed, "NEWSAD") %>
 <br /><hr>
 <strong><%= label_tag(:newsT, "News Title:") %></strong><br />
-<%= text_field(:newsT, nil, class: "none")%>
-<br /><br />
+<div class="form-group-sm"><%= text_field(:newsT, nil, class: "form-control")%></div>
+
 <strong><%= label_tag(:newsH, "News Heading:") %></strong><br />
-<%= text_field(:newsH, nil, class: "none")%>
-<br /><br />
+<div class="form-group-sm"><%= text_field(:newsH, nil, class: "form-control")%></div>
+
 <strong><%= label_tag(:newsD, "News Date:") %></strong> <br/>
-<%=text_field(:newsD, nil, class: "none")%>
-<br /><br />
+<div class="form-group-sm"><%=text_field(:newsD, nil, class: "form-control")%></div>
+
 
 <strong><%= label_tag(:newsD, "News Content:") %></strong> <br />
 <%= tinymce_assets %>
 <%= text_area_tag :content, "", :class => "tinymce", :rows => 15, :cols => 10 %>
 <%= tinymce%>
 <br />
- <%= submit_tag 'Generate', class: "btn-submit"%>
+ <%= submit_tag 'Generate', class: "btn-submit btn btn-primary"%>
 	<%end%>
 </div>
 

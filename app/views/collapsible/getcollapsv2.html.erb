@@ -1,18 +1,19 @@
+<h4 style="text-align:center">Trend Collaps Templet</h4>
 <div id="box">
 <%= form_tag url_for(:controller=>"collapsible",:action =>"getcollapsv2")  do %>
 <div class="collaps-row">
-
+<div class="well-cleaner-1 well-sm-cleaner">
 <%= check_box_tag 'strong'%>
 <%= label_tag(:allowed, "Strong") %>
 <%= check_box_tag 'h3'%>
 <%= label_tag(:allowed, "H3") %>
 <%= check_box_tag 'newcollaps'%>
 <%= label_tag(:allowed, "New Collapsible") %>
-<br />
+</div>
 <%= text_field_tag :trend_head,  "",:placeholder => "Collaps Heading",:class => "text-field-v2" %><br />
 <%= text_area_tag :trend,  "",:class => "text-area-v2" %>
 
-<%= submit_tag 'Generate', class: "btn-submit"%>
+<%= submit_tag 'Generate', class: "btn-submit btn btn-primary"%>
 </div>
  <%end%>
  </div>

@@ -48,6 +48,10 @@ gem 'best_in_place', github: 'bernat/best_in_place'
 
 gem 'puma'
 
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
+
 gem 'selenium-webdriver', '~> 2.48'
 
 gem 'mechanize'

@@ -118,9 +118,10 @@ end
       open_tags= @bundle_out.scan(/<\w/).count
       puts "biui====#{open_tags}"
       close_tags= @bundle_out.scan(/<\/\w/).count
-puts close_tags
+
       if open_tags.to_f == close_tags.to_f
         @tags=["Open and close tags are equal"]
+        @class="alert-success-cleaner"
       else
         @p=@bundle_out.scan(/<p/).count
         @cp=@bundle_out.scan(/<\/p/).count
@@ -148,6 +149,7 @@ puts close_tags
         end
         end
         @tags=@error #FINAL O/P FOR TAG COUNT
+        @class="alert-danger-cleaner"
         end
 ###########################################################
 end
