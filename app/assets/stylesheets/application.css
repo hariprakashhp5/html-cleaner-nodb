@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require bootstrap.min
+  *= require codemirror
+ *= require codemirror/themes/ttcn
  *= require_tree .
  *= require_self
  */

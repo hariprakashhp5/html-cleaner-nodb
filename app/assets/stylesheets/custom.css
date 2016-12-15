@@ -1,6 +1,6 @@
 .alert-cleaner {
-  padding: 3px;
-  margin-bottom: 2px;
+  padding: 6px;
+  margin-bottom: 6px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -10,6 +10,8 @@
   background-color: #dff0d8;
   border-color: #d6e9c6;
   text-align: center;
+  height:22px;
+  line-height:9px;
 }
 
 .alert-danger-cleaner {
@@ -17,6 +19,8 @@
   background-color: #f2dede;
   border-color: #ebccd1;
   text-align: center;
+    height:22px;
+  line-height:9px;
 }
 
 .well-cleaner,.well-cleaner-1 {
@@ -39,4 +43,5 @@
 .well-sm-cleaner {
   padding: 2px;
   border-radius: 3px;
+  height: 28px;
 }

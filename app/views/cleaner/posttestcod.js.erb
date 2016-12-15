@@ -1,8 +1,12 @@
-$('#editor').html("<%= j( render 'displayout')%>")   
+
+$('#tot').html("<%= j( render 'displayout')%>")
 
 $('.nums').html("<%=j(render 'numbr')%>")
 $('.nums').show(350);
 
+
+var val=document.getElementById("tot").textContent;
+ editor.getDoc().setValue(val);
 
 $('#op').html("<%=j(render 'rawop')%>");
 $('#op').show(350);

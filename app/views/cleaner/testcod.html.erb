@@ -1,29 +1,59 @@
 
-<div class="half-one">
-	<h3 style="text-align:center;">TEXT INPUT</h3>
-	
+
+<div class="col-md-6">
 <%= form_tag url_for(:controller=>"cleaner",:action =>"posttestcod"),remote:true  do %>
 
-<div class="well-cleaner well-sm-cleaner">
-	<%= check_box_tag 'accept'%> <%= label_tag(:allowed, "Allow <p> inside <td>") %>
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+   <li><label class="lable-class"><input type="checkbox" name="accept" id="accept" value="1">&nbsp;Allow p tag inside td tag</label></li>
+  </ul>
 </div>
+
+<!--<div class="well-cleaner well-sm-cleaner">-->
+	<!--<%#= check_box_tag 'accept'%> <%#= label_tag(:allowed, "Allow <p> inside <td>") %>-->
+<!--</div>-->
 <%= tinymce_assets %>
 <%= text_area_tag :content, "", :class => "tinymce", :rows => 28, :cols => 10 %>
 <%= tinymce %>
- <%= submit_tag 'Clean', class: "btn-submit btn btn-primary"%>
+ <%= submit_tag 'Convert', class: "btn-submit btn btn-primary"%>
 	<%end%>
 </div>
 
-
-
-
-<div id="test" class="half-one">
-	<span><h3>HTML:</h3></span><span class="nums"></span><br />
-	<textarea id="editor"></textarea>
-	<!-- <input type="textarea" id="editor"></input> -->
+<div id="test" class="col-md-6">
+	<div class="well-cleaner well-sm-cleaner">
+	<span class="nums"></span>
 	</div>
-<div style="clear:both"></div>
-<h3 style="text-align:center;">HTML OUTPUT</h3>
+	<textarea id="canvas" rows="34">
+&lt;h2&gt;Welcome to the Text to HTML Convertor!&lt;/h2&gt;
+&lt;p&gt;Just type or copy paste the text in the Left pan and click Convert Button, The HTML code will be shown in the right pan while the HTML view can be seen in the below section.&lt;/p&gt;
+	</textarea>
+</div>
+
+
+<div class="clearfix"></div>
+<h3 style="text-align:center;">RAW HTML</h3>
 <div id="op">
 </div>
 
+<div id="tot" style="display:none";>
+</div>
+
+<script>
+		var code = $("#canvas")[0];
+	var editor = CodeMirror.fromTextArea(code, {
+
+		lineNumbers : true,
+		lineWrapping: true,
+		mode : "text/html",
+		theme: 'ttcn'
+	});
+
+
+
+
+</script>

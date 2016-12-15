@@ -15,27 +15,6 @@ def posttestcod
 
 puts "vvvv=====#{params[:accept]}"
 
-# if params[:accept] == "1"
-# nogo={"<li>\n<p>" =>'<li>', "</p>\n</li>" => '</li>', 
-#       '<p> </p>' => '', '<ul>' => "\n<ul>", '</ul>' => "</ul>\n", '</ol>' => "</ol>\n", 
-#       '<table>' => "\n<table width='100%' border='0' cellspacing='0' cellpadding='0' class='table table-curved'>", 
-#       '<br>' => '','<p></p>' => '', ' rel="nofollow"' => '',
-#       "https://www.bankbazaar.com"=>"", "http://www.bankbazaar.com"=>""}
-# else
-#   nogo={"<li>\n<p>" =>'<li>', "</p>\n</li>" => '</li>', "<td>\n<p>" => '<td>', "</p>\n</td>" => '</td>', 
-#       '<p> </p>' => '','<ul>' => "\n<ul>",'</ul>' => "</ul>\n", '</ol>' => "</ol>\n",
-#       '<table>' => "\n<table width='100%' border='0' cellspacing='0' cellpadding='0' class='table table-curved'>", 
-#      '<br>' => '','<p></p>' => '', ' rel="nofollow"' => '', 
-#      "https://www.bankbazaar.com"=>"", "http://www.bankbazaar.com"=>""}
-# end
-
-# nogotwo={'&amp;'=>'&', '&lt;' => '<', '&gt;'=>'>'}
-
-# if params[:accept] == "1"
-# nogo={"<li>\n<p>" =>'<li>', "</p>\n</li>" => '</li>'}
-# els
-#   nogo={"<li>\n<p>" =>'<li>', "</p>\n</li>" => '</li>', "<td>\n<p>" => '<td>', "</p>\n</td>" => '</td>'}
-# end
 
 #######################----BB-FILTERS----######################
 if params[:accept] == "1"
@@ -44,7 +23,7 @@ else
   filterone={"<li>\n<p>" =>'<li>', "</p>\n</li>" => '</li>', "<td>\n<p>" => '<td>', "</p>\n</td>" => '</td>', '<br>' => ''}
 end
       
-  filtertwo={'<p> </p>' => '','<ul>' => "\n<ul>",'</ul>' => "</ul>\n", '</ol>' => "</ol>\n",
+  filtertwo={'<p> </p>' => '','<p> </p>' => '','<p></p>' => '','<ul>' => "\n<ul>",'</ul>' => "</ul>\n", '</ol>' => "</ol>\n",
            '<table>' => "\n"'<table class="table table-curved">', '<u><a href='=>'<a href=', '</a></u>'=>'</a>',
            '<br>' => '','<p></p>' => '', ' rel="nofollow"' => '', "https://www.bankbazaar.com"=>"", "http://www.bankbazaar.com"=>"", 
            '<h2><strong>'=>'<h2>','</strong></h2>'=>'</h2>','<h1><strong>'=>'<h1>', '</strong></h1>'=>'</h1>',
@@ -97,17 +76,6 @@ end
         lastfilter={'<html>'=>'','</html>'=>'','<body>'=>'', '</body>'=>'','&amp;'=>'&','&lt;'=>'<','&gt;'=>'>', '₹' => '&#8377;'}
             rexy= Regexp.new(lastfilter.keys.map { |x| Regexp.escape(x) }.join('|')) 
             htmlcontent=@final.inner_html.gsub(rexy,lastfilter)
-
-
-            # transformer = htmlcontent {|env|
-            #       node = env[:node]
-            #       return unless node.elem?
-
-            #       unless node.children.any?{|c| !c.text? || c.content.strip.length > 0 }
-            #       node.unlink
-            #       end
-            #       }
-
 
 
           @bundle_out=htmlcontent
