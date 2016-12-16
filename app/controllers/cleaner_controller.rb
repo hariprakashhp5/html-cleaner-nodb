@@ -1,6 +1,7 @@
 class CleanerController < ApplicationController
 
 def testcod
+ @current_url=request.original_url
 end
 
 def test

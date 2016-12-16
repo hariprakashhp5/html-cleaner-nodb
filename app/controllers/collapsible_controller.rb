@@ -3,6 +3,7 @@ class CollapsibleController < ApplicationController
 
 ######## Grid Collaps ##############
 def getcollaps
+	@current_url=request.original_url
 end
 
 def postcollaps
@@ -42,6 +43,7 @@ end
 
 ########## Trend Collaps #########
 def getcollapsv2
+	@current_url=request.original_url
 end
 
 def postcollapsv2

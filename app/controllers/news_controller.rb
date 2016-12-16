@@ -4,7 +4,7 @@ class NewsController < ApplicationController
 	end
 
 	def new
-		
+	@current_url=request.original_url	
 	end
 	# 
 	def news_gen

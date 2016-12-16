@@ -54,7 +54,11 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<%if !@current_url.include?("secret-river-61237")%>
 <%= yield %>
+<%else%>
+<%= render 'layouts/sitedown' %>
+<%end%>
 <br>
 <hr>
 </body>
