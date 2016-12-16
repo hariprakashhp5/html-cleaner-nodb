@@ -59,4 +59,4 @@ gem 'sanitize'
 gem 'nokogiri'
 gem 'htmlentities', '~> 4.3', '>= 4.3.4'
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'#, group: :production
