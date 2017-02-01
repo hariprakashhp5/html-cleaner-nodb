@@ -1,10 +1,11 @@
 class NewsController < ApplicationController
 
 	def index
+		detectURL
 	end
 
 	def new
-	@current_url=request.original_url	
+	detectURL
 	end
 	# 
 	def news_gen

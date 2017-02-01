@@ -3,11 +3,11 @@ class CollapsibleController < ApplicationController
 
 ######## Grid Collaps ##############
 def getcollaps
-	@current_url=request.original_url
+	detectURL
 end
 
 def postcollaps
-
+detectURL
 @column1=[]		
 @column2=[]
 @column3=[]
@@ -43,10 +43,11 @@ end
 
 ########## Trend Collaps #########
 def getcollapsv2
-	@current_url=request.original_url
+	detectURL
 end
 
 def postcollapsv2
+	detectURL
 	time=Time.now
 	@href='"#'+time.strftime("%d%h%y%H%M%S")+'"'
 	@id='"'+time.strftime("%d%h%y%H%M%S")+'"'
