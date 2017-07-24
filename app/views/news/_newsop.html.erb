@@ -7,7 +7,7 @@
 <<%=@tag%> class="news-head"><%=@newsH.first%></<%=@tag%>><br />
 <%=raw @newsC%><br />
 <div class="pull-right"> 
-<p><img src="/images/bb-logo.png" alt=""></p> <br />
+<p><img src="<%=@imageUrl%>" alt=""></p> <br />
 <p><em>
 <%=@newsD.first%>
 </em></p> </div> <br /> <div class="clearfix"></div> </li>
@@ -26,7 +26,7 @@
 <p>by BankBazaar posted on <%=@newsD.first%></p><br />
 <%= raw @newsC%><br />
 <div class="pull-right"><br />
-<img src="/images/common/bb-logo-180-40.png" alt="BankBazaar News About Loan"> <br />
+<img src="<%=@imageUrl%>" alt=""> <br />
 </div> <br />
 </li> <br />
 

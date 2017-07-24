@@ -15,6 +15,15 @@ class NewsController < ApplicationController
 		else
 			@tag = "h2"
 		end
+		imgUrl = params[:imgurl]
+		puts "**********************************"
+		puts imgUrl
+		if imgUrl == "1"
+			@imageUrl = "/images/bb-insurance-v1.png"
+		else
+			@imageUrl ="/images/common/bb-logo-180-40.png"
+		end
+		puts @imageUrl
 		@page=params[:page]
 		puts @page
 		@newsad=params[:newsad]
